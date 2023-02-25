@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div style="display:flex; justify-content:center;">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Add New Admin') }}
+                {{ __('Add New User') }}
             </h2>
         </div>
     </x-slot>
@@ -27,8 +27,14 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <div>
+                <x-jet-label for="number" value="{{ __('phone') }}" />
+                <x-jet-input id="number" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
+            </div>
+
             <div class="mt-4">
                 <select name="role" id="" class="block mt-1 w-full">
+                    <option value="" disabled selected hidden>User Type</option>
                     <option value="2">Admin</option>
                     <option value="1">Super Admin</option>
                     <option value="0">Staff</option>

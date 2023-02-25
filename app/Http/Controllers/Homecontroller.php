@@ -41,13 +41,17 @@ class Homecontroller extends Controller
         $data = new User;
 
         $this->validate($request, [
+            'name' => 'required',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => 'required',
+            'role' => 'required',
             'password' => 'required',
             'password_confirmation' => 'required|same:password'
         ]);
 
         $data->name=$request->name;
         $data->email=$request->email;
+        $data->phone=$request->phone;
         $data->password=bcrypt($request->password);
         $data->role=$request->role;
 

@@ -4,6 +4,8 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
+    <div class="cont2">
+        <p class="p">Welcome</p>
+    </div>
     
 </x-app-layout>
