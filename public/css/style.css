@@ -1,0 +1,39 @@
+.wrapper {
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    flex-direction:column;
+    padding: 50px;
+  }
+
+  .p {
+    font-size:25px;
+    font-weight: 600;
+  }
+
+  .btn1 {
+    background: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+    text-decoration: none;
+  }
+
+  .btn1:hover {
+    color: white;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .head1 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .head2 {
+    font-size: 20px;
+    color: grey;
+  }
